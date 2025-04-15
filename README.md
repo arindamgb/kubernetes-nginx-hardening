@@ -4,9 +4,9 @@
 ### Hardened NGINX deployment strategies in Kubernetes using least privilege, capabilities, and non-root best practices.
 > RND purpose only
 # This repository contains
-- í ½í»¡ï¸ NGINX with **minimal Process capabilities**
-- í ½í±¤ NGINX running as **non-root** using **file capabilities**
-- í ½í´’ NGINX as **non-root** without any capabilities (using unprivileged ports and pre-set file permissions)
+- ğŸ›¡ï¸ NGINX with **minimal Process capabilities**
+- ğŸ‘¤ NGINX running as **non-root** using **file capabilities**
+- ğŸ”’ NGINX as **non-root** without any capabilities (using unprivileged ports and pre-set file permissions)
 
 # A Recap on Linux Capabilities
 
@@ -84,7 +84,7 @@ getcap /usr/sbin/nginx
 /usr/sbin/nginx cap_net_bind_service=ep
 ```
 
-## í ½í³ Structure
+## ğŸ“ Structure
 
 ```bash
 .
@@ -108,7 +108,7 @@ getcap /usr/sbin/nginx
 ```
 # Running this project
 
-## í ½í»¡ï¸ NGINX with **minimal Process capabilities**
+## ğŸ›¡ï¸ NGINX with **minimal Process capabilities**
 
 ```
 git clone https://github.com/arindamgb/kubernetes-nginx-hardening.git
@@ -136,7 +136,7 @@ ppid  pid   name        command           capabilities
 0     1     root        nginx             chown, setgid, setuid, net_bind_service
 ```
 
-## í ½í±¤ NGINX running as **non-root** using **file capabilities**
+## ğŸ‘¤ NGINX running as **non-root** using **file capabilities**
 
 ```
 git clone https://github.com/arindamgb/kubernetes-nginx-hardening.git
@@ -183,7 +183,7 @@ ppid  pid   name        command           capabilities
 1     22    nginxuser   nginx             net_bind_service
 ```
 
-## í ½í´’ NGINX as **non-root** without any capabilities
+## ğŸ”’ NGINX as **non-root** without any capabilities
 
 ```
 git clone https://github.com/arindamgb/kubernetes-nginx-hardening.git
