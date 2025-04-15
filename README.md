@@ -3,6 +3,18 @@
 
 ### Hardened NGINX deployment strategies in Kubernetes using least privilege, capabilities, and non-root best practices.
 > RND purpose only
+
+# The Origin
+
+The idea of this repo came into existence from a [LinkedIn post of Bibin Wilson](https://www.linkedin.com/posts/bibinwilson_devops-activity-7291012399187312640-EIB8/) and my comment there.
+
+#### Will this pod run without any issues?
+
+![k8s-challenge.png](/images/k8s-challenge.png "k8s-challenge")
+
+![comment](/images/comment.png "my-comment")
+
+
 # This repository contains
 - 🛡️ NGINX with **minimal Process capabilities**
 - 👤 NGINX running as **non-root** using **file capabilities**
