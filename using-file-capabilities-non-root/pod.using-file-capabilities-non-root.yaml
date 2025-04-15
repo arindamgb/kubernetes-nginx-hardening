@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-using-file-capabilities-non-root
+spec:
+  securityContext:
+    runAsUser: 1001
+  containers:
+  - name: webserver
+    imagePullPolicy: Always
+    image: arindamgb/kubernetes-nginx-hardening:1.24.0-fcap
+    ports:
+    - containerPort: 80

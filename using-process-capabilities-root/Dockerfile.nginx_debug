@@ -1,0 +1,6 @@
+FROM nginx:1.24.0
+
+# Install libcap2-bin and libcap-ng-utils to enable setcap and pscap
+RUN apt-get update && \
+    apt-get install -y libcap2-bin && \
+    apt-get install -y libcap-ng-utils

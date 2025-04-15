@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-using-process-capabilities-root-debug-under-shell
+spec:
+  containers:
+  - name: webserver
+    imagePullPolicy: Always
+    image: arindamgb/kubernetes-nginx-hardening:1.24.0-pcap-debug
+    ports:
+    - containerPort: 80
+    command: ["sh", "-c"]
+    args: ["nginx -g 'daemon off;'"]
+    securityContext:
+      capabilities:
+        drop: ["ALL"]
+        add: ["NET_BIND_SERVICE", "CHOWN", "SETGID", "SETUID"]

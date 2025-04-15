@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-using-process-capabilities-root
+spec:
+  containers:
+  - name: webserver
+    imagePullPolicy: Always
+    image: nginx:1.24.0
+    ports:
+    - containerPort: 80
+    securityContext:
+      capabilities:
+        drop: ["ALL"]
+        add: ["NET_BIND_SERVICE", "CHOWN", "SETGID", "SETUID"]
