@@ -205,7 +205,7 @@ cd without-capabilities-non-root
 ```
 docker build -t arindamgb/kubernetes-nginx-hardening:1.24.0-nocap-debug -f Dockerfile_debug .
 docker push arindamgb/kubernetes-nginx-hardening:1.24.0-nocap-debug
-k apply -f without-capabilities-non-root.yaml
+k apply -f pod.without-capabilities-non-root_debug.yaml
 ```
 
 There are no `process` or `file` capabilities in play.
