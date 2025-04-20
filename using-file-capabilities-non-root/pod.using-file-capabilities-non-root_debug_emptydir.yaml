@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-using-process-capabilities-root-debug-emptydir
+  name: nginx-using-file-capabilities-non-root-debug-emptydir
 spec:
   containers:
   - name: webserver

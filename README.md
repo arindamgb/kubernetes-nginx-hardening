@@ -108,9 +108,9 @@ getcap /usr/sbin/nginx
 ├── using-file-capabilities-non-root
     ├── Dockerfile             # Non-Root NGINX with required file capabilities
     ├── Dockerfile_debug       # Non-Root NGINX with required file capabilities with debug tools
-    ├── pod.using-file-capabilities-root_debug.yaml  # k8s manifest to run the image having debug tools
-    ├── pod.using-file-capabilities-root_debug.yaml  # k8s manifest to run the image
-    ├── pod.using-process-capabilities-root_debug_emptydir.yaml # k8s manifest to run the image using emptyDir and different user (not 1001)
+    ├── pod.using-file-capabilities-non-root.yaml  # k8s manifest to run the image
+    ├── pod.using-file-capabilities-non-root_debug.yaml  # k8s manifest to run the image having debug tools
+    ├── pod.using-file-capabilities-non-root_debug_emptydir.yaml  # k8s manifest to run the debug image using emptyDir and different user (not 1001)
 └── without-capabilities-non-root
     ├── default.conf		   # port changed to 8080
     ├── Dockerfile                 # Non-Root NGINX with proper permissions and no capabilities
